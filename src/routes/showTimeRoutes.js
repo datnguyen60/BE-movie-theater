@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/', authMiddleware, adminMiddleware, showTimeController.createShowTime);
 router.get('/:id/seats', showTimeController.getSeatsByshowTime);
-router.get('/movie/:id', showTimeController.getShowDatesByMovie);
-router.get('/movie/:id/date/:date', showTimeController.getShowTimesByMovieAndDate)
+router.get('/movie/:movieId', showTimeController.getShowDatesByMovie);
+router.get('/movie/:movieId/date/:date', showTimeController.getShowTimesByMovieAndDate)
 
 module.exports = router;

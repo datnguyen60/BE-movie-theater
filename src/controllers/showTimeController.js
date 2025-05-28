@@ -18,8 +18,10 @@ exports.getSeatsByshowTime = async (req, res) => {
 exports.getShowDatesByMovie = async (req, res) => {
     try {
         const showTimes = await ShowTime.find({ movie: req.params.movieId });
-        const dates = Array.from(new Set(showTimes.map(st => st.startTime.toISOString().slice(0, 10))));
-        res.json(dates);
+        // const dates = Array.from(new Set(showTimes.map(st => st.startTime.toISOString().slice(0, 10))));
+        // res.json(dates);
+        res.json(showTimes);
+        
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -28,8 +30,7 @@ exports.getShowDatesByMovie = async (req, res) => {
 // Lấy lịch chiếu theo ngày, phân loại ghế
 exports.getShowTimesByMovieAndDate = async (req, res) => {
     try {
-        const { movieId } = req.params;
-        const { date } = req.query; // YYYY-MM-DD
+        const { movieId, date } = req.params;
         const start = new Date(date);
         const end = new Date(date);
         end.setDate(end.getDate() + 1);

@@ -86,6 +86,84 @@
 			"response": []
 		},
 		{
+			"name": "show-times by movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODM3MjQ3Zjk3MzUxYTU2Y2MxMjllODQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NDg0NDY3MjEsImV4cCI6MTc0OTA1MTUyMX0.M3GZbL7Ebf5IfymHjgE_KwBuUgFWrzeEVLbbYu16sI8"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/show-times/movie/68371f52279d2b54308331ff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"show-times",
+						"movie",
+						"68371f52279d2b54308331ff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show-times by movie and date",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODM3MjQ3Zjk3MzUxYTU2Y2MxMjllODQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NDg0NDY3MjEsImV4cCI6MTc0OTA1MTUyMX0.M3GZbL7Ebf5IfymHjgE_KwBuUgFWrzeEVLbbYu16sI8"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/show-times/movie/68371f52279d2b54308331ff/date/2025-06-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"show-times",
+						"movie",
+						"68371f52279d2b54308331ff",
+						"date",
+						"2025-06-01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "post movie",
 			"request": {
 				"method": "POST",
@@ -322,42 +400,6 @@
 					"path": [
 						"api",
 						"cinemas"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "show-times",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODM3MjQ3Zjk3MzUxYTU2Y2MxMjllODQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NDg0NDY3MjEsImV4cCI6MTc0OTA1MTUyMX0.M3GZbL7Ebf5IfymHjgE_KwBuUgFWrzeEVLbbYu16sI8"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://localhost:5000/api/show-times",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"show-times"
 					]
 				}
 			},
